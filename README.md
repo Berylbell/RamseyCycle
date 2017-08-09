@@ -6,6 +6,8 @@ This collection of scripts has been designed for use with PENTrack and tested on
 
 II. REQUIREMENTS
 
+This code runs with PENTrack as of August 10th 2017. The python scripts are written for Python 2 and have been tested with Python 2.7.9 and with Root version 5.34/19. 
+
 III. GENERATING FILESYSTEM 
 
 The generation of the ramsey cycle file system relies on the existance of a properly configured template directory. A good naming convetion for these template directories is "Template_testDesciptor". Properly configured means a few things. First the STL files that the simulation uses should not be stored in the template directory. Rather they should be stored in a directory with an absolute path from the PENTrack executable that can be simply refrenced. The template directoy should contain the three .in files: particle.in, config.in, and geometry.in. These configuration files should be checked prior to running the ramsCycle.py script to ensure that they function properly. Then, in the geometry.in file, the user should replace the frequency input with the string "InputFrequency" in all the locations that they want the frequency to the swept over. An example of a template can be seen in the Template_example directory.
@@ -28,4 +30,4 @@ This will result in the script opening all the files with the _out suffix, mergi
 
 V. ANALYSIS
 
-After the ramsey cycle has sucessfully been run and the output files have been downloaded, one can perform their analysis. Several python scripts with examples of how to handle the output data have been provided. # RamseyCycle
+After the ramsey cycle has sucessfully been run and the output files have been downloaded, one can perform their analysis. Several python scripts with examples of how to handle the output data have been provided. 
